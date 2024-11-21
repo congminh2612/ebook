@@ -1,0 +1,6 @@
+@use "sass:map";
+@import "../../Style/Page/theme";
+.card-price{
+    margin-top: 20px;
+    color: map.get($theme-color,"main");
+}
