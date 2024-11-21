@@ -1,0 +1,102 @@
+@use "sass:map";
+@import "../../../../Style/Page/theme";
+.footer{
+    color: map.get($theme-color,"normal-text");
+    background-color: #F3F6FA;
+    padding: 30px 0; 
+    .footer-about{
+        margin-bottom: 30px;
+        .footer-about-logo{
+            color: map.get($theme-color,"main");
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        ul li{
+            list-style: none;
+            font-size: 17px;
+            line-height: 30px;
+        }
+    }
+    .footer-widget{
+        // display: flex;
+        margin-bottom: 30px;
+        overflow: hidden;
+        // justify-content: space-between;
+        h3{
+            // color:map.get($theme-color,"normal-text")
+            margin-bottom: 30px;
+            // font-size: 16px;
+            font-weight: bold;
+        }
+        ul {
+            // padding: 30px 0 0 30px ;
+            // padding-top: 20px;
+            float: left;
+            width: 50%;
+            li{
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    font-size: 17px;
+                    line-height: 30px;
+                    color:map.get($theme-color,"normal-text")
+                }
+            }
+        }
+        p{
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+        form{
+            // position: relative;
+            margin-bottom: 30px;
+            .input-group{
+                display: flex;
+                justify-content: center;
+                input{
+                    width: 100%;
+                    color:map.get($theme-color,"normal-text");
+                    border: 1px solid #ededed;
+                    padding-left: 10px;
+                    font-size: 15px;
+                    height: 40px;
+                    ::placeholder{
+                        color:map.get($theme-color,"normal-text");
+                    }
+                }
+                button{
+                    // position: absolute;
+                    // top:0;
+                    // right: 0;
+                    padding: 0 16px;
+                    height: 40px;
+                    min-width: max-content;
+                }
+            }
+            .footer-widget-social{
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+                margin-top: 30px;
+                div{
+                    :hover{
+                        background-color: map.get($theme-color,"main");
+                        color:#ffffff;
+                        border-color: #ffffff;
+                    }
+                    svg{
+                        background: #ffffff;
+                        font-size: 30px;
+                        border: 1px solid #ededed;
+                        border-radius: 50%;
+                        padding: 2px;
+                        transition:all 0.3s;
+                        color:#404040;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+   
+}

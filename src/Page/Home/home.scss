@@ -1,0 +1,11 @@
+@use "sass:map";
+@import "../../Style/Page/theme";
+
+.title-book{
+    margin-top: 20px;
+    span{
+        font-size: 25px;
+        font-weight: bold;
+        color: map.get($theme-color,"main");
+    }
+}

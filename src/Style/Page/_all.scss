@@ -1,0 +1,80 @@
+@use "sass:map";
+@import "./theme";
+@import "./responsive.scss";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+html,
+* {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    max-width: 1200px;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    // background: map.get($theme-color,"main");
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-6{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.col-lg-3{
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.col-lg-6{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.col-lg-9{
+    flex: 0 0 75%;
+    max-width:75%;
+}
+.button-submit{
+    background-color:map.get($theme-color,"main");
+    color:white;
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    display: inline-block;
+    border: none;
+    height: 100%;
+    // padding: 16px 30px 17px;
+    padding-left: 30px;
+}
+@include Responsive($DESKTOP){
+    .col-xl-3{
+        flex: 0 0 25%;
+        max-width: 25%;
+        // background-color: yellowgreen;
+    }
+    .col-xl-6{
+        flex: 0 0 50%;
+        max-width: 50%;
+        // background-color: violet;
+    }
+}
+@include Responsive($MEDIUM_DEVICE){
+    .col-mb-6{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .col-mb-12{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+@include Responsive($SMALL_DEVICE){
+    .col-sm-12{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
