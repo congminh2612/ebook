@@ -216,9 +216,9 @@
         }
     }
 }
-.hero-search-container{
+// .hero-search-container{
     .hero-search-form{
-        width: 60%;
+        width: 100%;
         height: 50px;
         float: left;
         form{
@@ -228,7 +228,7 @@
         input{
             border: none;
             height: 100%;
-            width: 100%;
+            width: 70%;
             font-size: 17px;
             padding-left: 20px;
             // color: #b2b2b2;
@@ -254,6 +254,8 @@
     .hero-search-phone{
         display: flex;
         align-items: center;
+        padding-left: 30px;
+        // float: right;
         .hero-search-phone-icon svg{
             font-size: 40px;
             border-radius: 50%;
@@ -284,7 +286,7 @@
     }
     .hero-search-slider{
         // display: flex;
-        margin-top: 23px;
+        margin-top: 10px;
         // width: 100%;
         width:95%;
         height: 390px;
@@ -292,4 +294,4 @@
         // background-color: #6f6f6f;
         // background-image: url(https://i.pinimg.com/736x/46/c5/29/46c52912d4d8d7d008caaf8f7b02d836.jpg);
     }
-}
+// }

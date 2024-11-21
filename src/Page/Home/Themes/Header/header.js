@@ -212,16 +212,18 @@ const Header = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="col-lg-9 hero-search-container">
-                        <div className="hero-search-form">
-                            <from>
-                                <input 
-                                    type="text" 
-                                    placeholder="Tìm kiếm sản phẩm"
-                                />
-                                <button type="submit" className="site-btn">Tìm kiếm</button>
-                            </from>
-                        </div>
+                    <div className="col-lg-6">
+                            <div className="hero-search-form">
+                                <from>
+                                    <input 
+                                        type="text" 
+                                        placeholder="Tìm kiếm sản phẩm"
+                                    />
+                                    <button type="submit" className="site-btn">Tìm kiếm</button>
+                                </from>
+                            </div>
+                    </div>
+                    <div className="col-lg-3">
                         <div className="hero-search-phone">
                             <div className="hero-search-phone-icon">
                                 <AiOutlinePhone/>
@@ -231,10 +233,13 @@ const Header = () => {
                                 <span>Hỗ trợ 24/7</span>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-lg-3"></div>
+                    <div className="col-lg-9">
                         <div className="hero-search-slider">
-                
                             <AuToSlider arrImages={sliders}/>
-        
                         </div>
                     </div>
                 </div>
