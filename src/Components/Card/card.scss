@@ -2,5 +2,27 @@
 @import "../../Style/Page/theme";
 .card-price{
     margin-top: 20px;
-    color: map.get($theme-color,"main");
+    // color: map.get($theme-color,"main");
+    color:#f00505;
 }
+.StyleName {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
+    color: rgb(56, 56, 61);
+  }
+  
+  .WrapperReportText {
+    font-size: 16px;
+    color: rgb(56, 56, 61);
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+  }
+  
+  .WrapperPrice {
+    font-size: 16px;
+    color: rgb(255, 66, 78);
+    font-weight: 500;
+  }
+  

@@ -6,4 +6,5 @@ npm install react-icons
 npm install react-router-dom
 npm install sass
 npm install bootstrap
+npm install react-multi-carousel --save
 -->

@@ -21,7 +21,7 @@ const Header = () => {
         },
         {
             name: "Cửa hàng",
-            path: "",
+            path: ROUTER.USER.SHOP,
         },
         {
             name: "Sản phẩm",
