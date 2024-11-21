@@ -14,6 +14,10 @@ const HomePage = () => {
                         <CardBook/>
                         <CardBook/>
                         <CardBook/>
+                        <CardBook/>
+                        <CardBook/>
+                        <CardBook/>
+                        <CardBook/>
                     </div>
                 </div>
             </div>
