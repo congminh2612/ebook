@@ -4,7 +4,7 @@ export const ROUTER = {
         PROFILE:"thong-tin-ca-nhan",
         LOGIN:"dang-nhap",
         REGISTER:"dang-ky",
-        PRODUCT:"thong-tin-san-pham",
+        PRODUCTS:"san-pham",
         SHOPCART:"Gio-hang",
         SHOP:"cua-hang"
     }

@@ -21,7 +21,7 @@ const Header = () => {
         },
         {
             name: "Cửa hàng",
-            path: ROUTER.USER.SHOP,
+            path: ROUTER.USER.PRODUCTS,
         },
         {
             name: "Sản phẩm",
@@ -59,7 +59,7 @@ const Header = () => {
     const [bookCategory]  = useState([
         {
             name: "Văn học",
-            path: ROUTER.USER.HOME,
+            path: ROUTER.USER.PRODUCTS,
         },
         {
             name: "Vật lý",
@@ -142,7 +142,7 @@ const Header = () => {
                 <div className="row">
                     <div className="col-xl-3">
                         <div className="header-logo">
-                            <Link to = "">
+                            <Link to={ROUTER.USER.HOME}>
                                 <img 
                                     src={logo} 
                                     alt="Logo" 

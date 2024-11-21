@@ -5,7 +5,7 @@ import CartPage from "./Page/Cart/cart";
 import { Route, Routes } from "react-router-dom";
 import MasterLayout from "./Page/Home/MasterLayout/master_layout";
 import RegisterPage from "./Page/Register/register";
-import { Shop } from "./Page/Shop/shop";
+import { Products } from "./Page/Products/products";
 
 const RenderRouter = () => {
     const userRouters = [
@@ -30,8 +30,8 @@ const RenderRouter = () => {
             Component: <CartPage />
         },
         {
-            path: ROUTER.USER.SHOP,
-            Component: <Shop/>
+            path: ROUTER.USER.PRODUCTS,
+            Component: <Products/>
         },
     ];
 
