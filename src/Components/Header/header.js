@@ -1,19 +1,24 @@
 import "./header.scss"
-import {Link} from "react-router-dom"
+import {Link, useLocation} from "react-router-dom"
 import { SlUser } from "react-icons/sl";
 import { MdOutlineAttachEmail } from "react-icons/md";
-import { Formatter} from "../../../../Utils/formatter";
-import { FaGoogle } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaFacebookSquare } from "react-icons/fa";
-import { FaFacebookMessenger } from "react-icons/fa";
+import { Formatter} from "../../Utils/formatter";
+import { FaGithub, FaGoogle, FaFacebookMessenger, FaFacebookSquare } from "react-icons/fa";
 import { AiOutlineMenu, AiOutlinePhone, AiOutlineShoppingCart } from "react-icons/ai";
-import { useState } from "react";
-import { ROUTER } from "../../../../Utils/router";
-import logo from '../../../../Asset/logo.png'
-import { AuToSlider } from "../../../../Components/Slider/sliderAd";
+import { useEffect, useState } from "react";
+import { ROUTER } from "../../Utils/router";
+import logo from '../../Asset/logo.png'
+import { AuToSlider } from "../Slider/sliderAd";
 const Header = () => {
-    const [isCategoryShow,setIsCategoryShow] = useState(true)
+    const location = useLocation()
+    const [isHome, setIsHome] = useState(location.pathname.length<=1)
+    const [isShowCategory,setIsShowCategory] = useState(isHome)
+
+    useEffect(() => {
+        const isHome = location.pathname.length<=1;
+        setIsHome(isHome);
+        setIsShowCategory(isHome);
+    }, [location]);
     const [menus] = useState([
         {
             name: "Trang chủ",
@@ -182,10 +187,11 @@ const Header = () => {
                             </div>
                             <ul>
                                 <li>
-                                   <Link to ="" style={{color:"#1c1c1c"}}>
-                                        <AiOutlineShoppingCart/>
-                                        <span>19</span>
-                                   </Link>
+                                <Link to={ROUTER.USER.SHOPCART} style={{color: "#1c1c1c"}}>
+                                    <AiOutlineShoppingCart />
+                                    <span>19</span>
+                                </Link>
+
                                 </li>
                             </ul>
                         </div>
@@ -197,11 +203,11 @@ const Header = () => {
                 <div className="row hero-categories-container">
                     <div className="col-lg-3">
                         <div className="hero-categories">
-                            <div className="hero-categories-all" onClick={() => setIsCategoryShow(!isCategoryShow)}>
+                            <div className="hero-categories-all" onClick={() => setIsShowCategory(!isShowCategory)}>
                                 <AiOutlineMenu/>
                                 <span>Danh sách sản phẩm</span>
                             </div>
-                            <ul className={isCategoryShow ? "" :"hidden"}>
+                            <ul className={isShowCategory ? "" :"hidden"}>
                                 {
                                     bookCategory?.map((menu,key_menu)=>(
                                         <li key={key_menu}>
@@ -235,14 +241,16 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-                <div className="row">
+                {isHome && (
+                    <div className="row">
                     <div className="col-lg-3"></div>
                     <div className="col-lg-9">
                         <div className="hero-search-slider">
                             <AuToSlider arrImages={sliders}/>
                         </div>
                     </div>
-                </div>
+                    </div>
+                )}
             </div>
         </>
     )

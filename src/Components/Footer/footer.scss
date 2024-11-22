@@ -1,5 +1,5 @@
 @use "sass:map";
-@import "../../../../Style/Page/theme";
+@import "../../Style/Page/theme";
 .footer{
     color: map.get($theme-color,"normal-text");
     background-color: #F3F6FA;

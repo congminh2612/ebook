@@ -1,5 +1,5 @@
-import Footer from "../Themes/Footer/footer";
-import Header from "../Themes/Header/header";
+import Footer from "../../../Components/Footer/footer";
+import Header from "../../../Components/Header/header";
 
 const MasterLayout = ({ children, ...props }) => {
     return (
