@@ -1,0 +1,31 @@
+@use "sass:map";
+@import "../../Style/Page/theme";
+.header-orders{
+    ul{
+        display: flex;
+        justify-content: space-between;
+        background-color: map.get($theme-color,"bg-color");
+        align-items: center;
+        padding: 0 50px 0 50px;
+        margin: 25px;
+        border: 1px solid #ebebeb;
+        border-radius: 1%;
+        height: 60px;
+        li{
+        cursor: pointer;
+
+            list-style: none;
+            font-weight: bold;
+            font-size: 20px;
+            color:map.get($theme-color,"normal-text");
+            &:hover{
+                color:map.get($theme-color,"main")
+            }
+        }
+    }
+}
+.card-order{
+    height: 80px;
+    margin: 50px;
+    background-color: aquamarine;
+}

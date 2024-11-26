@@ -84,10 +84,10 @@
             list-style: none;
             a{
                 text-decoration: none;
-                font-size: 17px;
+                font-size: 20px;
                 font-weight: bold;
                 color:map.get($theme-color,"bold-text");
-                text-transform: uppercase;
+                // text-transform: uppercase;
                 display: block;
                 padding: 5px 0;
                 transition: all 0.3;
@@ -112,7 +112,7 @@
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s;
-            width: 150px;
+            width: 200px;
             z-index: 10;
             position: 5px 0;
             position: absolute;
@@ -194,7 +194,8 @@
         transition: all 0.2s;
         li{
             list-style: none;
-            a{
+            label{
+                cursor: pointer;
                 text-decoration: none;
                 font-size: 17px;
                 font-weight: bold;
@@ -206,13 +207,13 @@
             }
             &:hover {
                 background: #f7ffff;
-                a{
+                label{
                     color:map.get($theme-color,"main")
                 }
             }
         }
-        &.hidden{
-            opacity: 0;
+        &.display{
+            display: none;
         }
     }
 }
@@ -224,31 +225,32 @@
         form{
             display: flex;
             align-items: center;
-        }
-        input{
-            border: none;
             height: 100%;
-            width: 70%;
-            font-size: 17px;
-            padding-left: 20px;
-            // color: #b2b2b2;
-            color: #000;
-            border: 1px solid #ebebeb;
-            :focus{
-                outline: none;
+            input{
                 border: none;
+                height: 100%;
+                width: 70%;
+                font-size: 17px;
+                padding-left: 20px;
+                color: #000;
+                border: 1px solid #ebebeb;
+                :focus{
+                    outline: none;
+                    border: none;
+                }
             }
-        }
-        button{
-            font-size: 14px;
-            color:#ffffff;
-            background-color: map.get($theme-color,"main");
-            font-weight: bold;
-            display: inline-block;
-            padding: 18px 30px 17px;
-            text-transform: uppercase;
-            border: none;
-            height: 100%;
+            button{
+                cursor: pointer;
+                font-size: 14px;
+                color:#ffffff;
+                background-color: map.get($theme-color,"main");
+                font-weight: bold;
+                display: inline-block;
+                padding: 18px 30px 17px;
+                // text-transform: uppercase;
+                border: none;
+                height: 100%;
+            }
         }
     }
     .hero-search-phone{
@@ -285,13 +287,8 @@
         }
     }
     .hero-search-slider{
-        // display: flex;
         margin-top: 10px;
-        // width: 100%;
         width:95%;
         height: 390px;
         border-radius: 6%;
-        // background-color: #6f6f6f;
-        // background-image: url(https://i.pinimg.com/736x/46/c5/29/46c52912d4d8d7d008caaf8f7b02d836.jpg);
     }
-// }

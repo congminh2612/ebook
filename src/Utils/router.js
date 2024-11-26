@@ -6,5 +6,10 @@ export const ROUTER = {
         REGISTER:"/dang-ky",
         PRODUCTS:"/danh-sach-san-pham",
         SHOPCART:"/gio-hang",
+        ORDERS:"/don-hang",
+        PRODUCTDETAIL:"/san-pham-chi-tiet/:id",
+    },
+    ADMIN: {
+        HOME:"/admin"
     }
 }
