@@ -6,6 +6,7 @@ import "./productDetails.scss";
 import Carousel from "react-multi-carousel";
 import { fetchBooks } from "../../Api/book";
 import { CardBook } from "../../Components/Card/card";
+import { addToCart } from "../../Api/addToCart";
 
 const BookDetails = () => {
   const { id } = useParams(); // Lấy ID sách từ URL
@@ -87,12 +88,22 @@ const BookDetails = () => {
   const totalPrice = (parseFloat(book.price) * quantity).toFixed(2);
 
   // Xử lý sự kiện khi người dùng nhấn vào nút "Thêm vào giỏ hàng" hoặc "Mua ngay"
-  const handleAddCartAction = (action) => {
+  const handleAddCartAction = async (action) => {
     if (isOutOfStock) {
       alert("Sản phẩm đã hết hàng và không thể thêm vào giỏ hàng.");
-    } else {
-      user? alert(`Đã ${action} ${book.title} vào giỏ hàng!`)
-      :alert(`Bạn chưa đăng nhập, vui lòng đăng nhập !`);
+      return;
+    }
+    if (!user) {
+      alert("Bạn chưa đăng nhập, vui lòng đăng nhập!");
+      return;
+    }
+    try {
+      // Gọi API thêm vào giỏ hàng
+      const result = await addToCart(user.id, book.id, quantity);
+      alert(`Đã ${action} ${book.title} vào giỏ hàng!`);
+      console.log("Kết quả thêm vào giỏ hàng:", result);
+    } catch (error) {
+      alert(`Lỗi: ${error.message}`);
     }
   };
   const handleBuyAction = (action) => {
